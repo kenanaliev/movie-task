@@ -10,6 +10,7 @@
     overflow:auto;
     background-color: rgb(125, 7, 44);
     background-color: rgb(236, 232, 232); */
+  
 
 }
 .active{
@@ -44,4 +45,12 @@
     text-decoration: none;
     cursor: pointer;
 
+}
+
+image{
+    width: 300px;
+}
+
+img {
+    max-width: 100%;
 }

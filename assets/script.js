@@ -11,6 +11,7 @@ button.addEventListener('click',()=>{
     modal.classList.toggle('active')
 })
 
+
 save.addEventListener('click',(e)=>{
     e.preventDefault()
     let tr=document.createElement('tr')
@@ -21,17 +22,28 @@ save.addEventListener('click',(e)=>{
     let imdbTd=document.createElement('td')
     let categoryTd=document.createElement('td')
     let rejisorTd=document.createElement('td')
+    let settings=document.createElement('td')
+    let del=document.createElement('button')
+    let edit=document.createElement('button')
     
-    image.src=img.value
- 
+    image.src=img.value 
+    imageTd.style.width= ('100px')
     imageTd.append(image)
     imdbTd.textContent=imdb.value
     nameTd.textContent=Name.value
     categoryTd.textContent=category.value
     rejisorTd.textContent=rejisor.value
+    del.textContent="del"
+    edit.textContent="edit"
 
-    tr.append(imageTd,nameTd,imdbTd,categoryTd,rejisorTd)
+    settings.append(edit,del)
+    tr.append(imageTd,nameTd,imdbTd,categoryTd,rejisorTd,settings)
     tbody.append(tr)
+
+
+   del.addEventListener('click',()=>{
+    del.parentElement.parentElement.remove()
+   })
 })
 
 
